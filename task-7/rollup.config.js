@@ -8,7 +8,7 @@ import css from 'rollup-plugin-css-only';
 export default {
     input: 'src/index.js',
     output: {
-        file: 'public/bundle.js',
+        file: 'dist/bundle.js',
         format: 'iife',
     },
     plugins: [
@@ -16,6 +16,6 @@ export default {
         commonjs(),
         terser(),
         html({ inject: false, template: 'index.html' }),
-        css({ output: 'public/bundle.css' }),
+        css({ output: 'bundle.css' }),
     ],
 };
